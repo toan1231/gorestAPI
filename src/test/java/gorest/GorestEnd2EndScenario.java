@@ -1,13 +1,16 @@
 package gorest;
 
-import io.cucumber.datatable.dependency.com.fasterxml.jackson.core.JsonProcessingException;
-import io.cucumber.datatable.dependency.com.fasterxml.jackson.databind.ObjectMapper;
+
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.testng.annotations.Test;
 import requestBuilder.GorestRequestBuilder;
+import io.restassured.RestAssured;
 
 public class GorestEnd2EndScenario {
     @Test
-    public void end2End() {
+    public void end2End() throws JsonProcessingException {
 /*This is Gorest API end to end scenario and cover almost everything you learnt so far. Please finish it before next class.
  *  You can reach out me if you have any question
 
@@ -34,14 +37,11 @@ public class GorestEnd2EndScenario {
         builder.setGender("female");
         builder.setStatus("active");
         //convert object to json and print
+        ObjectMapper mapper=new ObjectMapper();
+        String stringJSon= mapper.writerWithDefaultPrettyPrinter().writeValueAsString(builder);
+        System.out.println(stringJSon);
 
-        try {
-            ObjectMapper objectMapper=new ObjectMapper();
-            requestBuilder= objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(builder);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
-        System.out.println(requestBuilder);
+
 
     }
 
