@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-10-31T22:09:13 EDT" name="Surefire suite" finished-at="2022-10-31T22:09:13 EDT" duration-ms="312">
+    <groups>
+    </groups>
+    <test started-at="2022-10-31T22:09:13 EDT" name="Surefire test" finished-at="2022-10-31T22:09:13 EDT" duration-ms="312">
+      <class name="gorest.GorestEnd2EndScenario">
+        <test-method signature="end2End()[pri:0, instance:gorest.GorestEnd2EndScenario@4b168fa9]" started-at="2022-10-31T22:09:13 EDT" name="end2End" finished-at="2022-10-31T22:09:13 EDT" duration-ms="281" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end2End -->
+      </class> <!-- gorest.GorestEnd2EndScenario -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
